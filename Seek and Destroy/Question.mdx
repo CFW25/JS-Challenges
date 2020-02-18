@@ -1,0 +1,41 @@
+You will be provided with an initial array 
+(the first argument in the destroyer function), followed by one or more arguments. 
+Remove all elements from the initial array that are of the same value as these arguments.
+
+Note: You have to use the arguments object.
+
+So basically we'll have to create a function called destroyer. 
+When it will be called they'll provide an array or numbers as the first argument and then one or more arguments as numbers. 
+We need to remove all the occurrences of these numbers from the array.
+
+destroyer([1, 2, 3, 2, 3, 1], 2, 3)
+
+Should return [1, 1] as we remove all the 2's and 3's from the provided array.
+
+Get all the values from the arguments object using Object.values
+Remove the first item as it is the provided array
+Save all the remaining numbers into a separate array, let's call it destroyerArr
+Filter out all the numbers that are into the arr by comparing them to the numbers from the destoryerArr.
+
+function destroyer(arr) {
+    // Step 3.        // Step 1.              // Step 2.
+    const destroyerArr = Object.values(arguments).slice(1);
+
+    // Step 4.
+    return arr.filter(x => !destroyerArr.find(y => y === x));
+}
+
+function destroyer(arr) {
+    return arr.filter(
+        x =>
+            !Object.values(arguments)
+                .slice(1)
+                .find(y => y === x)
+    );
+}
+
+when the find function will return a number, like: 2 for example, 
+by adding ! in front it will be converted to false -> JavaScript "magic". xD
+Otherwise if the find function will return undefined, 
+because it couldn't find the number in the destroyerArr, 
+the ! operation will convert undefined to true -> JavaScript "magic" reloaded!

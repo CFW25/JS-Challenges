@@ -1,0 +1,47 @@
+Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. 
+    The returned value should be a number.
+
+For example, getIndexToIns([1, 2, 3, 4], 1.5) should return 1 because it is greater than 1 (which has index 0), 
+    but less than 2 (which has index 1).
+
+Likewise, getIndexToIns([20, 3, 5], 19) should return 2 because once the array has been sorted it will look like [3, 5, 20] 
+    and 19 is less than 20 (index 2) and greater than 5 (index 1).
+
+
+Source:
+https://www.florin-pop.com/blog/2019/02/jcc-where-do-i-belong/
+
+
+Create array, add value, sort array. Check where value is by index number return that value
+
+When compare function is specified, array elements are sorted according to the return value of the compare function. 
+
+For example, when comparing a and b:
+If the compare function returns a value less than 0, then a comes first.
+If the compare function returns a value greater than 0, then b comes first.
+If the compare function returns 0, a and b remain unchanged with respect to each other, but sorted with respect to all other elements.
+Hence, since 5 - 20 = -15 which is less than 0, therefore 5 comes first, similarly 20 - 10 = 10 
+which is greater than 0, therefore 10 comes before 20, likewise 20 - 75 = -55 which is less than 0, so 20 comes before 75, 
+similarly 50 comes before 75, and so on.
+
+Other solutions:
+const getIndexToIns = (arr, num) =>
+    // Step 1.
+    [...arr, num]
+        .sort((a, b) => a - b)
+        // Step 2.
+        .reduce(
+            (acc, current, i) => (current === num && acc === -1 ? i : acc),
+            -1
+        );
+
+let getIndexToIns = (arr, num) =>
+    arr.reduce((acc, current) => (num > current ? ++acc : acc), 0);
+
+
+    The reducer function takes four arguments:
+
+Accumulator (acc) - accumulated value previously returned in the last invocation of the callback
+Current Value (cur)
+Current Index (idx)
+Source Array (src)

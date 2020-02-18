@@ -1,0 +1,1 @@
+Function that takes number and returns corresponding month as a string 

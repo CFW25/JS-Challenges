@@ -1,0 +1,1 @@
+Function that removes odd/even numbers, returns val

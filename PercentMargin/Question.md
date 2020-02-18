@@ -1,0 +1,1 @@
+Function that calculates profit margin given costPrice and salesPrice. Return as a 1 decimal percentage formatted as a string

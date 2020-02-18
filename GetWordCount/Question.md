@@ -1,0 +1,1 @@
+Create function that takes a string and returns the word count. String will be a sentence.

@@ -1,0 +1,1 @@
+Function returns true if a has contains the specified key, false otherwise

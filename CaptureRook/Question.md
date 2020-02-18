@@ -1,0 +1,1 @@
+Function that returns true if two rooks can attack each other, and false otherwise.

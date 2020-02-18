@@ -1,0 +1,1 @@
+Create function that reverses a bool. Returns "boolean expected" if other variable type given

@@ -1,0 +1,23 @@
+You are in charge of the cake for your niece's birthday and have decided the cake will have one candle for each year of her total age. 
+When she blows out the candles, she’ll only be able to blow out the tallest ones. 
+
+Your task is to find out how many candles she can successfully blow out.
+
+For example, if your niece is turning 4 years old, and the cake will have 4 candles of height 3, 3, 1, 2, 
+she will be able to blow out 2 candles successfully, since the tallest candles are of height 3 and there are such candles.
+
+Create a function: birthdayCakeCandles. It must return an integer representing the number of candles she can blow out.
+
+birthdayCakeCandles has the following parameter: arr - an array of integers representing candle heights.
+
+Solution:
+1. create a variable which will store the highest candle height. Let's call this variable: max
+2. (a) loop over the array and (b) increase a counter everytime the current item is equal to max
+3. if the item is higher than max, reset the counter and also set max to be equal to the item
+4. at the end, return the counter
+(item is the current candle height from the given arr)
+
+Solution Two:
+1. Use Math.max + the array spread operator to get the maximum value from the array
+2. use the array's filter method to return an array with only the max values
+3. return the length of this filtered array

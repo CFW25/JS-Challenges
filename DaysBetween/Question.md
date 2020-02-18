@@ -1,0 +1,1 @@
+Function that takes two dates and returns num of days between the two

@@ -1,0 +1,1 @@
+Function takes int and returns reverse of the binary equiv

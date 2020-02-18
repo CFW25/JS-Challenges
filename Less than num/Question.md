@@ -1,0 +1,1 @@
+Given x numbers, return true if less than y, overwise return false

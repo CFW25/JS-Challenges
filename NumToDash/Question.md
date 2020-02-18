@@ -1,0 +1,1 @@
+Function that takes a number (1 - 60) and returns string of hyphens 

@@ -1,0 +1,1 @@
+Function that takes an array (slot machine outcome) and returns true if all elements in array are identical, false otherwise. Array always contains 4 elements.

@@ -1,0 +1,1 @@
+Function that takes an array that returns difference between biggest and smallest numbers
