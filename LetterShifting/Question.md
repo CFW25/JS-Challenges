@@ -1,0 +1,7 @@
+FAILED
+
+Function that takes a string and shifts the letters left by amount n but not the whitespace
+
+shiftLetters("Boom", 2) ➞ "omBo"
+shiftLetters("This is a test",  4) ➞ "test Th i sisa"
+shiftLetters("A B C D E F G H", 5) ➞  "D E F G H A B C"
